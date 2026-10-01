@@ -1,0 +1,242 @@
+
+/* 1. Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #243342;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 2. Header and navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.logo {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #126b65;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: #34495e;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #13877d;
+}
+
+/* 3. Hero section */
+.hero {
+  padding: 100px 8%;
+  background-color: #edf7f6;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #13877d;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: 0 auto 24px;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.15;
+  color: #173b4a;
+}
+
+.hero p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: #526575;
+  font-size: 1.1rem;
+}
+
+/* 4. Buttons */
+.button {
+  display: inline-block;
+  padding: 14px 26px;
+  background-color: #126b65;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #0b504b;
+}
+
+/* 5. Services section */
+.services {
+  padding: 75px 8%;
+  text-align: center;
+}
+
+.services h2,
+.why-us h2,
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  color: #173b4a;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 38px;
+  text-align: left;
+}
+
+.service-card {
+  padding: 28px;
+  border: 1px solid #e1e8ed;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.service-card h3 {
+  color: #126b65;
+  margin-bottom: 12px;
+}
+
+.service-card p,
+.why-us p,
+.cta p {
+  color: #526575;
+}
+
+/* 6. Why us section */
+.why-us {
+  padding: 65px 8%;
+  text-align: center;
+  background-color: #f6f8fa;
+}
+
+.why-us p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 7. Call to action */
+.cta {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.cta p {
+  margin-bottom: 25px;
+}
+
+/* 8. Footer */
+footer {
+  padding: 28px 8%;
+  text-align: center;
+  background-color: #173b4a;
+  color: #ffffff;
+}
+
+footer p + p {
+  margin-top: 5px;
+  color: #d3e1e7;
+  font-size: 0.9rem;
+}
+
+/* 9. Responsive layout for phones and tablets */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 70px 6%;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .services,
+  .why-us,
+  .cta {
+    padding: 50px 6%;
+  }
+}
+
+
+/* Contact form */
+.contact-form {
+  max-width: 600px;
+  margin: 35px auto 0;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #173b4a;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px;
+  font: inherit;
+  color: #243342;
+  border: 1px solid #ccd6dd;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid #13877d;
+  outline-offset: 2px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
