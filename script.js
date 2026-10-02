@@ -50,7 +50,7 @@ if (contactForm) {
   }
 
   contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+    
     // console.log("Submit handler is running");
     let formIsValid = true;
 
