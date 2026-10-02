@@ -37,54 +37,71 @@
 <section class="services">
   <h2>Request a Free Consultation</h2>
 
-  <form class="contact-form" action="#" method="post">
-    <div class="form-group">
-      <label for="name">Full Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Your full name"
-        required
-      >
-    </div>
+  
+<form
+  class="contact-form"
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  action="#"
+>
+  <input type="hidden" name="form-name" value="contact">
 
-    <div class="form-group">
-      <label for="email">Email Address</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="you@example.com"
-        required
-      >
-    </div>
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Your full name"
+      required
+      minlength="2"
+      aria-describedby="name-error"
+    >
+    <span id="name-error" class="error-message"></span>
+  </div>
 
-    <div class="form-group">
-      <label for="organization">Organization</label>
-      <input
-        type="text"
-        id="organization"
-        name="organization"
-        placeholder="Your organization"
-      >
-    </div>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+      aria-describedby="email-error"
+    >
+    <span id="email-error" class="error-message"></span>
+  </div>
 
-    <div class="form-group">
-      <label for="message">How Can We Help?</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="5"
-        placeholder="Tell us about your goals..."
-        required
-      ></textarea>
-    </div>
+  <div class="form-group">
+    <label for="organization">Organization</label>
+    <input
+      type="text"
+      id="organization"
+      name="organization"
+      placeholder="Your organization"
+    >
+  </div>
 
-    <button type="submit" class="button">
-      Request Consultation
-    </button>
-  </form>
+  <div class="form-group">
+    <label for="message">How Can We Help?</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="5"
+      placeholder="Tell us about your goals..."
+      required
+      minlength="10"
+      aria-describedby="message-error"
+    ></textarea>
+    <span id="message-error" class="error-message"></span>
+  </div>
+
+  <button type="submit" class="button">
+    Request Consultation
+  </button>
+</form>
 </section>
   </main>
 
